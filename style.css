@@ -5,18 +5,139 @@
 }
 
 body{
-    background: linear-gradient(red,grey);
+    background: linear-gradient(#120010,#100003);
+    backdrop-filter: blur(200px);
+}
+
+header{
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(#120010,#120014);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    text-align: center;
+    z-index: 200;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.news_column{
+    height: 400px;
+    width: 220px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    font-size: larger;
+    font-style: oblique;
+    box-shadow: 0px 0px 10px 3px #1a1a1a;
 }
 
 .dashboard{
-    backdrop-filter: blur(0px);
-    width: 300px;
-    height: 200px;
+    width: 600px;
+    height: 500px;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
-    text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(94, 37, 41, 0.2);
     backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px 3px #1a1a1a;
+    margin: 10px;
+    padding: 10px;
+    z-index: 100;
+}
+
+#urlcheck{
+    border: 2px solid black;
+    border-radius: 30px;
+    background: rgba(3, 0, 0, 0.5);
+    backdrop-filter: blur(100px);
+    box-shadow: 0px 0px 20px 6px #120000;
+    height: 20px;
+    width: 300px;
+}
+
+#urlcheck:focus{
+    border: none;
+    box-shadow: 0px 0px 10px 10px #120000;
+    background-color: rgba(188, 19, 254, 0,2);
+    outline: none;
+}
+
+#urlcheck:hover{
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.1em 0.1em 0.1em 0.1em 0.1em;
+}
+
+#url_checkbtn{
+    background-color: black;
+    border: 2px solid grey;
+    border-radius: 0.4em;
+    cursor: pointer;
+    box-shadow: 0.1em 0.1em;
+}
+
+#url_checkbtn:hover{
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+#url_checkbtn:active{
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+.password_checker{
+    height: 500px;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    font-size: larger;
+    font-style: oblique;
+    box-shadow: 0px 0px 10px 3px #1a1a1a;
+}
+
+#pass_check{
+    border: 2px solid black;
+    border-radius: 30px;
+    background: rgba(3, 0, 0, 0.5);
+    backdrop-filter: blur(100px);
+    box-shadow: 0px 0px 20px 6px #120000;
+    margin-top: 15px;
+}
+
+#pass_check:focus{
+    border: none;
+    box-shadow: 0px 0px 10px 10px #120000;
+    background-color: rgba(188, 19, 254, 0,2);
+    outline: none;
+}
+
+#pass_check:hover{
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.1em 0.1em 0.1em 0.1em 0.1em;
+}
+
+#pass_checkbtn{
+    background-color: black;
+    border: 2px solid grey;
+    border-radius: 0.4em;
+    cursor: pointer;
+    box-shadow: 0.1em 0.1em;
+}
+
+#pass_checkbtn:hover{
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+#pass_checkbtn:active{
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
 }
