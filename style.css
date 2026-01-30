@@ -1,31 +1,83 @@
-*{
+* {
     color: whitesmoke;
     padding: 10px;
     font-family: monospace;
 }
 
-body{
-    background: linear-gradient(#120010,#100003);
+body {
+    background: linear-gradient(#100003, #120010);
     backdrop-filter: blur(200px);
 }
 
-header{
-    border: 1px solid black;
-    border-radius: 20px;
-    background: linear-gradient(#120010,#120014);
-    backdrop-filter: blur(20px);
-    padding: 10px;
+.logo {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    z-index: 200;
+    background: none;
+    background-color: #413b3bf8;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
 }
 
-main{
+#logo_without_name {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+header {
+    border: 2px solid black;
+    border-radius: 20px;
+    background: linear-gradient(#120010, #120014);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    padding: 0px;
+    z-index: 200;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    /* Animated gradient background */
+    background: linear-gradient(-45deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Optional content styling */
+h1 {
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+main {
     display: flex;
     justify-content: center;
 }
 
-.news_column{
-    height: 400px;
+.news_column {
+    height: 500px;
     width: 220px;
     border: 1px solid black;
     border-radius: 20px;
@@ -36,9 +88,9 @@ main{
     box-shadow: 0px 0px 10px 3px #1a1a1a;
 }
 
-.dashboard{
+.dashboard {
     width: 600px;
-    height: 500px;
+    height: 520px;
     border: 2px solid black;
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -51,7 +103,7 @@ main{
     z-index: 100;
 }
 
-#urlcheck{
+#urlcheck {
     border: 2px solid black;
     border-radius: 30px;
     background: rgba(3, 0, 0, 0.5);
@@ -61,19 +113,19 @@ main{
     width: 300px;
 }
 
-#urlcheck:focus{
+#urlcheck:focus {
     border: none;
     box-shadow: 0px 0px 10px 10px #120000;
-    background-color: rgba(188, 19, 254, 0,2);
+    background-color: rgba(188, 19, 254, 0, 2);
     outline: none;
 }
 
-#urlcheck:hover{
+#urlcheck:hover {
     transform: translate(-0.05em, -0.05em);
     box-shadow: 0.1em 0.1em 0.1em 0.1em 0.1em;
 }
 
-#url_checkbtn{
+#url_checkbtn {
     background-color: black;
     border: 2px solid grey;
     border-radius: 0.4em;
@@ -81,17 +133,17 @@ main{
     box-shadow: 0.1em 0.1em;
 }
 
-#url_checkbtn:hover{
+#url_checkbtn:hover {
     transform: translate(-0.05em, -0.05em);
     box-shadow: 0.15em 0.15em;
 }
 
-#url_checkbtn:active{
+#url_checkbtn:active {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
 }
 
-.password_checker{
+.password_checker {
     height: 500px;
     width: 350px;
     border: 1px solid black;
@@ -103,7 +155,7 @@ main{
     box-shadow: 0px 0px 10px 3px #1a1a1a;
 }
 
-#pass_check{
+#pass_check {
     border: 2px solid black;
     border-radius: 30px;
     background: rgba(3, 0, 0, 0.5);
@@ -112,32 +164,37 @@ main{
     margin-top: 15px;
 }
 
-#pass_check:focus{
+#pass_check:focus {
     border: none;
     box-shadow: 0px 0px 10px 10px #120000;
-    background-color: rgba(188, 19, 254, 0,2);
+    background-color: rgba(188, 19, 254, 0, 2);
     outline: none;
 }
 
-#pass_check:hover{
+#pass_check:hover {
     transform: translate(-0.05em, -0.05em);
     box-shadow: 0.1em 0.1em 0.1em 0.1em 0.1em;
 }
 
-#pass_checkbtn{
+#pass_checkbtn {
     background-color: black;
     border: 2px solid grey;
     border-radius: 0.4em;
     cursor: pointer;
     box-shadow: 0.1em 0.1em;
+    margin: 10px;
 }
 
-#pass_checkbtn:hover{
+#pass_checkbtn:hover {
     transform: translate(-0.05em, -0.05em);
     box-shadow: 0.15em 0.15em;
 }
 
-#pass_checkbtn:active{
+#pass_checkbtn:active {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
+}
+
+footer {
+    text-align: center;
 }
