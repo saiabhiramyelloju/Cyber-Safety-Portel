@@ -22,3 +22,37 @@ passwordInput.addEventListener("input", () => {
 
   strengthText.textContent = strengthMap[result.score];
 });
+
+checklogin();
+
+function checklogin() {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if(isLoggedIn === "true"){
+    showApp();
+  }
+  else{
+    showLogin();
+  }
+}
+
+function login(){
+  const user = document.getElementsByClassName("username").value
+  const pass = document.getElementsByClassName("password").value
+
+  if(user === "" || pass === ""){
+    document.getElementById("error").innerText = "Fill all feilds";
+    return;
+  }
+  localStorage.setItem("isloggedIn","true");
+  showApp();
+}
+
+function showApp(){
+  document.getElementById("log").style.display = "none";
+  document.getElementById("appSection").style.display = "block";
+}
+
+function showLogin(){
+  document.getElementById("log").style.display = "block";
+  document.getElementById("appSection").style.display = "none";
+}

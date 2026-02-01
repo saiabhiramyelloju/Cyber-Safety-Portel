@@ -7,7 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <div class="log">    
+    <div id="login-box">
+        <h2>Login</h2>
+        <input type="email" id="log-details" class="username" placeholder="Enter Your email..">
+        <input type="password" id="log-details" class="password" placeholder="password">
+        <button type="button" id="login-btn">login</button>
+        <p id="error" style="color: red;"></p>
+    <!-- </div>
+    <div id="login-box">
+        <h3>Sign up</h3>
+        <input type="email" id="log-details" placeholder="enter your email..">
+        <input type="password" id="log-details" placeholder="New password">
+        <input type="password" id="log-details" placeholder="re-enter password">
+        <button type="button" id="signup-btn">Sign up</button> -->
+    </div>
+    </div>
+    <div class="appSection">
+        <header>
         <div class="logo">
             <img src="assets/logo_without_name.png" alt="logo" id="logo_without_name">
         </div>
@@ -18,7 +35,7 @@
             <strong>Today's News</strong>
         </div>
         <div class="dashboard">
-            <u><h1>Dashboard</h1></u>
+            <u><h1>Url Checker</h1></u>
             <input type="url" id="urlcheck" placeholder="Paste the url here">
             <input type="button" value="check" id="url_checkbtn">
         </div>
@@ -34,6 +51,7 @@
         <b>By - AstraX2</b><br>
         <caption>all rights are reserved | @2026</caption>
     </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <script src="script.js"></script>
 </body>

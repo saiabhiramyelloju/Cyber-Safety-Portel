@@ -9,6 +9,62 @@ body {
     backdrop-filter: blur(200px);
 }
 
+h2{
+    color: black;
+}
+
+.log{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+
+}
+
+#login-box{
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 300px;
+    width: 250px;
+    background-color: #472e2e9f;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#log-details{
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: auto;
+    background-color: #181c2e9f;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 35px;
+}
+
+#login-btn{
+    color: black;
+    border: none;
+    border-radius: 20px;
+    background-color: #4562e0;
+    margin: 10px;
+}
+
+#signup-btn{
+    color: black;
+    border: none;
+    border-radius: 20px;
+    background-color: #4562e0;
+    margin: 10px;
+}
+
 .logo {
     display: flex;
     justify-content: center;
