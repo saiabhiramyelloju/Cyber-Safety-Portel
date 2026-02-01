@@ -23,36 +23,39 @@ passwordInput.addEventListener("input", () => {
   strengthText.textContent = strengthMap[result.score];
 });
 
-checklogin();
+document.addEventListener("DOMContentLoaded", () => {
 
-function checklogin() {
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
-  if(isLoggedIn === "true"){
-    showApp();
-  }
-  else{
-    showLogin();
-  }
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      showApp();
+    } else {
+      showLogin();
+    }
+
+    // allow page to render ONLY after decision
+    document.body.style.visibility = "visible";
+  });
+
+  function showApp() {
+  document.querySelector(".log").style.display = "none";
+  document.querySelector(".appSection").style.display = "block";
 }
 
-function login(){
-  const user = document.getElementsByClassName("username").value
-  const pass = document.getElementsByClassName("password").value
+function showLogin() {
+  document.querySelector(".log").style.display = "flex";
+  document.querySelector(".appSection").style.display = "none";
+}
 
-  if(user === "" || pass === ""){
-    document.getElementById("error").innerText = "Fill all feilds";
+  document.getElementById("login-btn").addEventListener("click", () => {
+  const email = document.querySelector(".username").value.trim();
+  const pass = document.querySelector(".password").value.trim();
+  const error = document.getElementById("error");
+
+  if (!email || !pass) {
+    error.textContent = "Email and password required";
     return;
   }
-  localStorage.setItem("isloggedIn","true");
+
+  // fake success (frontend only)
+  localStorage.setItem("isLoggedIn", "true");
   showApp();
-}
-
-function showApp(){
-  document.getElementById("log").style.display = "none";
-  document.getElementById("appSection").style.display = "block";
-}
-
-function showLogin(){
-  document.getElementById("log").style.display = "block";
-  document.getElementById("appSection").style.display = "none";
-}
+});

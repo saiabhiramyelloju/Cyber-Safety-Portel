@@ -7,10 +7,15 @@
 body {
     background: linear-gradient(#100003, #120010);
     backdrop-filter: blur(200px);
+    visibility: hidden;
 }
 
 h2{
     color: black;
+}
+
+.appSection {
+  display: none;
 }
 
 .log{
@@ -55,6 +60,7 @@ h2{
     border-radius: 20px;
     background-color: #4562e0;
     margin: 10px;
+    cursor: pointer;
 }
 
 #signup-btn{
